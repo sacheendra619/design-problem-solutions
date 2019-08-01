@@ -1,5 +1,10 @@
 import java.util.HashMap;
 
+/**
+ * Data structure to hold key and data and links to prev and next Node.
+ * @param <K>
+ * @param <V>
+ */
 class Node<K,V> {
     V data;
     K key;
@@ -12,6 +17,11 @@ class Node<K,V> {
         this.key = key;
     }
 }
+/**
+ * Simple Doubly Linked List Implementation with only few methods implemented.
+ * @param <K>
+ * @param <V>
+ */
 class DoublyLinkedList<K,V> {
     private Node<K,V> head;
     private Node<K,V> tail;
@@ -46,6 +56,11 @@ class DoublyLinkedList<K,V> {
     }
 }
 
+/**
+ * basic LRU cache implementation
+ * @param <K> key of the cache
+ * @param <V> data corresponding to that key.
+ */
 class LRUCache<K,V> {
     private HashMap<K,Node<K,V>> hashMap;
     DoublyLinkedList<K,V> doublyLinkedList;
